@@ -279,7 +279,7 @@ vscode优点
 看一下网上的有没有克隆成功
 经过检验是没有问题的，在把原来的复制过来
 
-## day4 ##
+## day4用3.3个小时 ##
 5.21今天学习循环结构，同时用到分支结构和循环结构的应用场景，例如，用程序控制机器人踢足球，如果持球还没进入射门范围内，那么我们就要一直发出让机器人向球门方向奔跑的指令。
 
 for-in循环
@@ -343,5 +343,89 @@ print(sum)`
 
 5/21/2019 10:19:17 AM 
 发现可以通过上面的按钮来记录时间，从而可以精确地计算每一次所用的时间
+
+先在再回过头来，自学今天的循环结构
+
+用for循环实现1~100的偶数求和
+    `sum=0
+	for x in range (2,101,2): ##开始，结束，步长
+	    sum +=x
+	print(sum)`
+
+while循环
+
+如果不知道具体循环次数的循环结构，用while循环，while循环通过一个能产生或转换bool值的表达式来控制循环，表达式的值为True循环继续，表达式的值为False循环结束。
+
+一个猜数字的小游戏
+    `import random
+
+	answer=random.randint(1,100)
+	counter=0
+	while True:
+	    counter+=1
+	    number=int(input('请输入：'))
+	    if number<answer:
+	        print('大一点')
+	    elif number>answer:
+	        print('小一点')
+	    else:
+	        print('恭喜你才对了')
+	        break
+	print('你总共才对了%d次'%counter)
+	if counter>7:
+	    print('你脑子有点不够用')`
+> 上面的代码中使用了break关键字来提前终止循环，需要注意的是break只能终止它所在的那个循环，另一个关键字是continue，它可以用来放弃本次循环后续的代码直接让循环进入下一轮
+
+九九乘法表
+    `for i in range(1,10):
+    	for j in range (1,i+1):
+        	print('%d*%d=%d' % (i,j,i*j),end='\t')
+    	print()`
+
+输入两个正整数，计算最大公约数和最小公倍数
+    `x=int(input('x= '))
+	y=int(input('y= '))
+	if x >y:
+	    x,y=y,x
+	for factor in range (x,0,-1):
+	    if x %factor==0 and y%factor==0:##就是x和y除以同一个数后，余数为零是，这个数就是最大公约数
+	        print('%d和%d最大公约数是%d'%(x,y,factor))
+	        print('%d和%d的最小公倍数是%d'%(x,y,x*y//factor))##最小公倍数是两数相乘后再除以他们的最大公约数
+	        break`
+### 进步点 ###
+双斜号是什么意思，是整除的意思
+
+最后一个练习，也是一个理解稍微困难的练习，关键是要和脑子中已经有的做斗争，打印三角形的图案
+    `row=int (input('请输入行数：'))
+	for i in range (row):
+	    for _ in range(i+1): #这里的_应该表示是空格的意思
+	        print('*',end='')
+	    print()
+	
+	for i in range (row ):
+	    for j in range (row):
+	        if j <row -i-1:
+	            print(' ',end='')       ###注意有一个引号是空格
+	        else:
+	            print('*',end='')
+	    print()
+	
+	for i in range(row):
+	    for _ in range (row-i -1):
+	        print(' ',end='')
+	    for _ in range (2*i +1):
+	        print('*',end='')
+	    print()`
+### 进步点 ###
+row是什么意思，根据上面的意思是一个你自己输入的任意的整数
+
+### 注意点 ###
+
+这个和你以前的思维习惯不一样
+range(101)可以产生一个0到100的整数序列
+range(1,100)可以产生一个1到99的整数序列
+range(1,100,2)可以产生一个1到99的奇数序列，其中2是步长，即数值序列的增量
+
+5/21/2019 12:00:55 PM 
 
 
