@@ -96,13 +96,13 @@ for i in range(times):print(word, "!!!")他只是说明一个循环次数，打�
 下面是三种不同的算法，猜测和检查算法，近似算法，二分法算法
 ## 第一个算法是猜测和检查 ##
 下面试猜测一个正数的立方根
-    `cube = 8
+    cube = 8
 	for guess in range(cube+1):
 	    if guess**3 == cube:
-	        print("Cube root of", cube, "is", guess)`
+	        print("Cube root of", cube, "is", guess)
 
 进阶版——猜测考虑进负数，break 语句，提前结束for循环
-    `cube = -27
+    cube = -27
 	for guess in range(abs(cube)+1):
 	    # passed all potential cube roots
 	    if guess**3 >= abs(cube):
@@ -114,7 +114,7 @@ for i in range(times):print(word, "!!!")他只是说明一个循环次数，打�
 	    if cube < 0:
 	        guess = -guess
 	        
-	    print('Cube root of ' + str(cube) + ' is ' + str(guess))`
+	    print('Cube root of ' + str(cube) + ' is ' + str(guess))
 
 ## 第二个算法，近似解 ##
 
