@@ -163,11 +163,13 @@ reason：从逻辑上推论是，学习得更全面，练习的更全面，使�
 
 ### 流程控制1——分支 ###
 分支有三种情况
+
 1.
 if <condition>:
 	<expression>
 	<expression>
 	···
+
 2.
 if <condition>:
 	<expression>
@@ -287,13 +289,16 @@ break循环的一个例子
 	print(mysum)
 
 mysum += i 
+
 if mysum == 5: 
+
 	break 
+
 这三行是最里面的循环，所以都得退出。
 mysum += 1
 这是代码块中剩下的，所以也退出
 
-对流程控制中的两种循环的比较
+#### 对流程控制中的两种循环的比较 ####
 
 for循环
 1. 知道循环的次数
@@ -326,6 +331,7 @@ while循环
 
 
 1. 猜测和检查算法
+2. 
 下面试猜测一个正数的立方根
 
 	cube = 8
@@ -357,18 +363,20 @@ while循环
 
 
 2. 第二个算法，近似解
+
+
 - 以猜测开始并以一些小值递增
 - keep guessing if |guess3-cube| >= epsilon for some small epsilon里面的epsilon的存在是为了提供一个更好的解决方案
 - decreasing increment size  slower program 精度越大的话，当然所需要的时间也就会多一些
 - increasing epsilon  less accurate answer 如果这增加了epsilon，你就会牺牲精度，从而更快的得到结果
+
+
 
 	cube = 27
 	epsilon = 0.1
 	guess = 0.0
 	increment = 0.01
 	num_guesses = 0
-	# look for close enough answer and make sure
-	# didn't accidentally skip the close enough bound
 	while abs(guess**3 - cube) >= epsilon and guess <= cube:
 	    guess += increment
 	    num_guesses += 1
@@ -377,6 +385,7 @@ while循环
 	    print('Failed on cube root of', cube, "with these parameters.")
 	else:
 	    print(guess, 'is close to the cube root of', cube)
+
 
 从流程控制的角度来分析这段代码，前5行是初始化数据。
 第一个流程控制是while循环，while循环中的条件句用到了and运算符，两个条件都满足的情况才能返回True.当while循环结束后，print一下循环的总数
