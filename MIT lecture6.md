@@ -103,6 +103,7 @@ n*(n-1)! 说明 else:      return n*factorial(n-1)
 ## 重复和递归的比较 ##
 
 重复
+
 	def factorial(n):
 	    prod=1
 	    for i in range(1,n+1):
@@ -115,6 +116,7 @@ n*(n-1)! 说明 else:      return n*factorial(n-1)
 
 
 递归
+
 	def factorial(n):
 	    if n==1:
 	        return 1
@@ -147,6 +149,7 @@ n*(n-1)! 说明 else:      return n*factorial(n-1)
 	print(mult_iter(2,3))
 
 下面的这段代码真的是像极了，一个故事：从前有座山，山上有座庙，庙里有个老和尚在给小和尚讲故事，讲得是什么呢？从前有座山，山上有座庙，庙里有个老和尚在给小和尚讲故事，讲得是什么呢？从前有座山，山上有座庙，庙里有个老和尚在给小和尚讲故事，讲得是什么呢？···
+
 	def mult(a,b):
 	    if b==1:
 	        return a
@@ -159,6 +162,7 @@ n*(n-1)! 说明 else:      return n*factorial(n-1)
 
 - 为了证明索引的整数声明是对于n的所有值真
 
+明天持续更新中
 
 姓名： 马林
 
