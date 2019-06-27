@@ -165,7 +165,7 @@ s=IntSet()
 	        self.x = x
 	        self.y = y
 	    def __str__(self):
-	        """ 返回self的字符串表示形式 """
+	        """ 返回self的字符串表示形式 _str_是特殊方法的名称	一定返回一个字符串"""
 	        return "<" + str(self.x) + "," + str(self.y) + ">"
 	    def distance(self, other):
 	        """ 返回两点之间的欧氏距离 """
@@ -203,3 +203,102 @@ s=IntSet()
 总共用时：约2h
 
 欢迎学过的小伙伴们观看和提意见，温故而知新。欢迎即将要学到这节课的小伙伴浏览预习。
+
+6/27/2019 8:47:17 PM 
+
+## 怎样使用一个方法 ##
+方法定义的格式
+def distance(self, other): 
+
+使用类：
+
+1. 传统方式
+c = Coordinate(3,4)
+zero = Coordinate(0,0)
+print(c.distance(zero))
+print括号里的分别是	对象调用方法	方法的名字	参数不包括自我（自我表示的是c）
+
+2. 相当于
+c = Coordinate(3,4)
+zero = Coordinate(0,0)
+print(Coordinate.distance(c, zero))
+print括号里的分别是	类的名字	方法的名字	参数
+
+## 对象的打印表示 ##
+
+1. 默认情况下**无法提供**信息的打印表示
+2. 为类定义**__str__方法**
+3. 当在类对象上使用print时，Python会调用__str__方法
+4.  你选择它做什么！ 假设当我们打印一个Coordinate对象时，想要显示
+
+c = Coordinate(3,4) 
+print(c) 
+<3,4>
+
+## 定义自己的打印方法 ##
+
+	def __str__(self):
+	        """ 返回self的字符串表示形式 _str_是特殊方法的名称	一定返回一个字符串"""
+	        return "<" + str(self.x) + "," + str(self.y) + ">"
+
+## 在类型和类别周围缠绕你的头 ##
+
+- 可以询问对象实例的类型
+>>> c = Coordinate(3,4) 
+>>> print(c) 
+<3,4> 
+返回_str_方法
+
+>>> print(type(c)) 
+<class __main__.Coordinate> 
+返回对象c的类型
+
+- 这是有道理的
+>>> print(Coordinate)
+<class __main__.Coordinate> 
+坐标是一个类
+
+>>> print(type(Coordinate)) 
+<type 'type'> 
+Coordinate类是一种对象
+
+- 使用isinstance（）来检查对象是否是坐标
+>>> print(isinstance(c, Coordinate)) True
+
+## 特别经营者 ##
+-  +, -, ==, <, >, len(), print, and many others
+
+- 喜欢打印，可以覆盖这些与你的类一起工作
+
+- 在前/后使用双下划线定义它们
+__add__(self, other)  self + other 
+__sub__(self, other)  self - other 
+__eq__(self, other)  self == other 
+__lt__(self, other)  self < other 
+__len__(self)  len(self) 
+__str__(self)  print self 
+... and others
+
+## 示例：分数 ##
+- 创建一个**新类型**以将数字表示为分数
+- **内部表示**是两个整数
+	- 分子
+	- 分母
+- **接口**a.k.a.**方法**a.k.a如何与Fraction对象进行**交互**
+	- 加，减
+	- 打印表示，转换为浮点数
+	- 反转分数
+- 这个代码是在讲义中，检查出来！
+
+## OOP的定义 ##
+- 将共享的对象**捆绑**在一起
+	- 常用属性和
+	- 对这些属性进行操作的过程
+
+- 使用**抽象**来区分如何实现对象与如何使用对象
+- 构建从其他类对象继承行为的对象**抽象层**
+- 在Python的基本类之上创建我们**自己的对象类**
+
+抽象数据类型非常的重要，它可以衍生出一种组织大型程序的新思维方式。
+
+在生物领域，人们谈论的蛋白质和残留物，这些概念，实际上是在脑海中搜集与这些对象有关的数据和特性，然后放在一块形成一个知识包。
