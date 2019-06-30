@@ -87,7 +87,7 @@
 3. 函数的特性
 - 有**名字**
 - 有**参数**
-- 有一个**docstring**
+- 有一个**说明**
 - 有**正文**
 - **返回**一些东西
 
@@ -118,19 +118,19 @@
 ## 一个警告：如果没有return语句 ##
 将返回None，所以如果结果出现了None值的话，需要你检查一下是否写上了return语句
 
-    `def f(x):
+    def f(x):
 		    x=x+1
 		    print('inf(x):x=',x)
 		    return x 
 	    
 	x=3
-	z=f(x)`
+	z=f(x)
 	
 6/9/2019 9:02:34 AM 
 
 6/9/2019 9:27:19 AM 
 
-    `## Simple is_even function definition
+    ## Simple is_even function definition
 	def is_even( i ):
 	    """ 
 	    Input: i, a positive int
@@ -145,7 +145,7 @@
 	    if is_even(i):
 	        print(i, "even")
 	    else:
-	        print(i, "odd")`
+	        print(i, "odd")
 
 注意函数块的使用会使代码变得非常的好看
 
@@ -167,6 +167,7 @@
 	print(func_a())
 	print(5+func_b(2))
 	print(func_c(func_a))
+
 结合那几张ppt的话，会更容易理解
 如果，一步一步地写的话，还是非常容易理解的
 
@@ -220,19 +221,19 @@ x=5时函数之外所定义的，这是看三遍后理解的。
 接着做lecture4的练习题
 做第一个练习题的时候，猛然发现，有一张ppt上关于return 和print函数的比较还没有看，
 
-return
-
-- return only has meaning **inside** a function 
-- 在函数内只执行**一次**返回
-- 函数内部在return后面的代码不执行
-- 具有与之关联的值，**赋予函数调用者**
-
-而print
-
-- print can be used **outside** functions 
-- can execute **many** print statements inside a function 
-- code inside function can be executed after a print statement 
-- 有一个与之关联的值，**输出到控制台**
+    return
+    
+    - return only has meaning **inside** a function 
+    - 在函数内只执行**一次**返回
+    - 函数内部在return后面的代码不执行
+    - 具有与之关联的值，**赋予函数调用者**
+    
+    而print
+    
+    - print can be used **outside** functions 
+    - can execute **many** print statements inside a function 
+    - code inside function can be executed after a print statement 
+    - 有一个与之关联的值，**输出到控制台**
 
 下面一段函数，关于return和print
 
