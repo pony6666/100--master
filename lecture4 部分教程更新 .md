@@ -54,3 +54,58 @@
 姓名： 马林
 学习内容：lcture的4小部分小教程完成
 总共用时：约0.3小时
+
+对应的对象是函数
+
+## 函数 ##
+1. 编写可重用的代码/代码块，称为函数
+2. 在程序中“**召唤**”或“**调用**”函数之前，函数不会在程序中运行
+3. 函数的特性
+- 有**名字**
+- 有**参数**
+- 有一个**说明**
+- 有**正文**
+- **返回**一些东西
+
+## 可变范围 ##
+- **形式参数**在调用函数时绑定到**实际参数**的值
+- 输入函数时创建的**新范围/框架/环境**
+- 范围是名称到对象的映射
+
+
+## 一个警告：如果没有return语句 ##
+将返回None，所以如果结果出现了None值的话，需要你检查一下是否写上了return语句
+
+    def f(x):
+		    x=x+1
+		    print('inf(x):x=',x)
+		    return x 
+	    
+	x=3
+	z=f(x)
+
+关于return 和print函数的比
+
+return
+
+- return only has meaning **inside** a function 
+- 在函数内只执行**一次**返回
+- 函数内部在return后面的代码不执行
+- 具有与之关联的值，**赋予函数调用者**
+
+而print
+
+- print can be used **outside** functions 
+- can execute **many** print statements inside a function 
+- code inside function can be executed after a print statement 
+- 有一个与之关联的值，**输出到控制台**
+
+姓名： 马林
+
+学习内容：lecture 4 教程的部分更新
+
+打卡天数：第28天
+
+总共用时：约0.3h
+
+欢迎学过的小伙伴们观看和提意见，温故而知新。欢迎即将要学到这节课的小伙伴浏览预习。
